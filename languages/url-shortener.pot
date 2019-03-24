@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: URL Shortener\n"
+"POT-Creation-Date: 2019-02-24 16:03+0000\n"
+"PO-Revision-Date: 2019-02-24 16:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: https://translate.azurecurve.co.uk/\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: azrcrv-url-shortener.php\n"
+
+#: azrcrv-url-shortener.php:160
+msgid "Settings"
+msgstr ""
+
+#: azrcrv-url-shortener.php:176
+msgid "URL Shortener Settings"
+msgstr ""
+
+#: azrcrv-url-shortener.php:177
+msgid "URL Shortener"
+msgstr ""
+
+#: azrcrv-url-shortener.php:191
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: azrcrv-url-shortener.php:209
+msgid ""
+"Settings have been saved except the domain which must be different to the "
+"site URL."
+msgstr ""
+
+#: azrcrv-url-shortener.php:215
+msgid "Site settings have been saved."
+msgstr ""
+
+#: azrcrv-url-shortener.php:230
+msgid "Use Lowercase Characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:231 azrcrv-url-shortener.php:232
+msgid "Use lowercase characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:236
+msgid "Use Uppercase Characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:237 azrcrv-url-shortener.php:238
+msgid "Use uppercase characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:242
+msgid "Use Numeric Characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:243 azrcrv-url-shortener.php:244
+msgid "Use numeric characters"
+msgstr ""
+
+#: azrcrv-url-shortener.php:248
+msgid "Length"
+msgstr ""
+
+#: azrcrv-url-shortener.php:250
+msgid "Length of the shortened url"
+msgstr ""
+
+#: azrcrv-url-shortener.php:253
+msgid "Protocol"
+msgstr ""
+
+#: azrcrv-url-shortener.php:255
+msgid "Protocol used for redirects (http or https)"
+msgstr ""
+
+#: azrcrv-url-shortener.php:258
+msgid "Domain"
+msgstr ""
+
+#: azrcrv-url-shortener.php:260
+msgid "Domain used for redirects (such as azrcrv.co.uk)"
+msgstr ""
+
+#: azrcrv-url-shortener.php:263
+msgid "Sidebar Priority"
+msgstr ""
+
+#: azrcrv-url-shortener.php:273
+msgid "Example usage"
+msgstr ""
+
+#: azrcrv-url-shortener.php:275
+msgid "Example shortcode usage"
+msgstr ""
+
+#: azrcrv-url-shortener.php:278
+msgid "Example function usage"
+msgstr ""
+
+#: azrcrv-url-shortener.php:304
+msgid "You do not have permissions to perform this action"
+msgstr ""
+
+#: azrcrv-url-shortener.php:378 azrcrv-url-shortener.php:758
+#: azrcrv-url-shortener.php:759
+msgid "Short URL"
+msgstr ""
+
+#: azrcrv-url-shortener.php:399
+msgid "This post's short url is"
+msgstr ""
+
+#: azrcrv-url-shortener.php:760
+msgid "Add New"
+msgstr ""
+
+#: azrcrv-url-shortener.php:761
+msgid "Add New Short URL"
+msgstr ""
+
+#: azrcrv-url-shortener.php:762
+msgid "Edit"
+msgstr ""
+
+#: azrcrv-url-shortener.php:763
+msgid "Edit Short URL"
+msgstr ""
+
+#: azrcrv-url-shortener.php:764
+msgid "New Short URL"
+msgstr ""
+
+#: azrcrv-url-shortener.php:765
+msgid "View"
+msgstr ""
+
+#: azrcrv-url-shortener.php:766
+msgid "View Short URL"
+msgstr ""
+
+#: azrcrv-url-shortener.php:767
+msgid "Search Short URLs"
+msgstr ""
+
+#: azrcrv-url-shortener.php:768
+msgid "No Short URLs found"
+msgstr ""
+
+#: azrcrv-url-shortener.php:769
+msgid "No Short URLs found in Trash"
+msgstr ""
+
+#: azrcrv-url-shortener.php:770
+msgid "Parent Short URL"
+msgstr ""
