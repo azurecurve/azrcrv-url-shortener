@@ -35,6 +35,11 @@ Settings page allows options for short url generation to be configured.
 
 == Changelog ==
 Changes and feature additions for the URL Shortener plugin:
+= 1.0.1 =
+* Fix bug of custom short url matching page slug.
+* Update azurecurve menu for easier maintenance.
+* Move require of azurecurve menu below security check.
+* Localization fixes.
 = 1.0.0 =
 * First version for ClassicPress forked from azurecurve URL Shortener WordPress Plugin.
 

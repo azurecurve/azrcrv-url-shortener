@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: URL Shortener\n"
-"POT-Creation-Date: 2019-02-24 16:03+0000\n"
+"POT-Creation-Date: 2020-01-05 13:11+0000\n"
 "PO-Revision-Date: 2019-02-24 16:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: https://translate.azurecurve.co.uk/\n"
@@ -105,12 +106,16 @@ msgstr ""
 msgid "Example function usage"
 msgstr ""
 
+#: azrcrv-url-shortener.php:288
+msgid "Submit"
+msgstr ""
+
 #: azrcrv-url-shortener.php:304
 msgid "You do not have permissions to perform this action"
 msgstr ""
 
-#: azrcrv-url-shortener.php:378 azrcrv-url-shortener.php:758
-#: azrcrv-url-shortener.php:759
+#: azrcrv-url-shortener.php:378 azrcrv-url-shortener.php:735
+#: azrcrv-url-shortener.php:736
 msgid "Short URL"
 msgstr ""
 
@@ -118,46 +123,46 @@ msgstr ""
 msgid "This post's short url is"
 msgstr ""
 
-#: azrcrv-url-shortener.php:760
+#: azrcrv-url-shortener.php:737
 msgid "Add New"
 msgstr ""
 
-#: azrcrv-url-shortener.php:761
+#: azrcrv-url-shortener.php:738
 msgid "Add New Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:762
+#: azrcrv-url-shortener.php:739
 msgid "Edit"
 msgstr ""
 
-#: azrcrv-url-shortener.php:763
+#: azrcrv-url-shortener.php:740
 msgid "Edit Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:764
+#: azrcrv-url-shortener.php:741
 msgid "New Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:765
+#: azrcrv-url-shortener.php:742
 msgid "View"
 msgstr ""
 
-#: azrcrv-url-shortener.php:766
+#: azrcrv-url-shortener.php:743
 msgid "View Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:767
+#: azrcrv-url-shortener.php:744
 msgid "Search Short URLs"
 msgstr ""
 
-#: azrcrv-url-shortener.php:768
+#: azrcrv-url-shortener.php:745
 msgid "No Short URLs found"
 msgstr ""
 
-#: azrcrv-url-shortener.php:769
+#: azrcrv-url-shortener.php:746
 msgid "No Short URLs found in Trash"
 msgstr ""
 
-#: azrcrv-url-shortener.php:770
+#: azrcrv-url-shortener.php:747
 msgid "Parent Short URL"
 msgstr ""

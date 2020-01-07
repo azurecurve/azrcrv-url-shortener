@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: URL Shortener
  * Description: Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/Url-shortener
@@ -17,13 +17,13 @@
  * ------------------------------------------------------------------------------
  */
 
-// include plugin menu
-require_once(dirname(__FILE__).'/pluginmenu/menu.php');
-
 // Prevent direct access.
 if (!defined('ABSPATH')){
 	die();
 }
+
+// include plugin menu
+require_once(dirname(__FILE__).'/pluginmenu/menu.php');
 
 /**
  * Setup registration activation hook, actions, filters and shortcodes.
@@ -285,7 +285,7 @@ if(function_exists('azrcrv_urls_get_custom_shortlink')){
 					</td></tr>
 					
 				</table>
-				<input type="submit" value="Save Changes" class="button-primary" />
+				<input type="submit" value="<?php esc_html_e('Submit', 'url-shortener'); ?>" class="button-primary"/>
 			</form>
 		</fieldset>
 	</div>
@@ -662,7 +662,7 @@ function azrcrv_urls_redirect_incoming(){
 			exit;
 		}
 	}
-
+	
 }
 
 /**
@@ -674,7 +674,7 @@ function azrcrv_urls_redirect_incoming(){
 function azrcrv_urls_identify_post_from_shortlink($short_url){
 	global $wpdb;
 	
-	$sql = $wpdb->prepare("SELECT post_id FROM ".$wpdb->postmeta." WHERE meta_key IN ('_ShortURL', '_CustomShortURL') AND meta_value = '%s'", $short_url);
+	$sql = $wpdb->prepare("SELECT pm.post_id FROM ".$wpdb->postmeta." AS pm INNER JOIN $wpdb->posts AS p ON p.ID = pm.post_id WHERE meta_key IN ('_ShortURL', '_CustomShortURL') AND meta_value = '%s' AND post_slug <> '%s'", $short_url, $short_url);
 	
 	$post_id = $wpdb->get_var($sql);
 	
