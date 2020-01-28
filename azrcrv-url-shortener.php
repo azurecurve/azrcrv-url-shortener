@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: URL Shortener
  * Description: Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
- * Version: 1.0.1
+ * Version: 1.2.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/Url-shortener
@@ -24,6 +24,10 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname(__FILE__).'/pluginmenu/menu.php');
+register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_urls');
+
+// include update client
+require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
 
 /**
  * Setup registration activation hook, actions, filters and shortcodes.
@@ -43,6 +47,7 @@ add_action('save_post', 'azrcrv_urls_save_short_url');
 add_action('wp_head', 'azrcrv_urls_add_links_to_site_header');
 add_action('init', 'azrcrv_urls_redirect_incoming');
 add_action('init', 'azrcrv_urls_create_post_type');
+add_action('plugins_loaded', 'azrcrv_urls_load_languages');
 
 // add filters
 add_filter('plugin_action_links', 'azrcrv_urls_add_plugin_action_link', 10, 2);
@@ -50,6 +55,17 @@ add_filter('get_shortlink', 'azrcrv_urls_admin_get_custom_shortlink', 10, 3);
 
 // add shortcodes
 add_shortcode('short-url', 'azrcrv_urls_get_custom_shortlink');
+
+/**
+ * Load language files.
+ *
+ * @since 1.0.0
+ *
+ */
+function azrcrv_urls_load_languages() {
+    $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
+    load_plugin_textdomain('azrcrv-urls', false, $plugin_rel_path);
+}
 
 /**
  * Load CSS.
@@ -199,7 +215,7 @@ function azrcrv_urls_display_options(){
 	?>
 	<div id="azrcrv-urls-general" class="wrap">
 		<fieldset>
-			<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+			<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 			
 			<?php
 			if(isset($_GET['settings-updated'])){
@@ -674,7 +690,7 @@ function azrcrv_urls_redirect_incoming(){
 function azrcrv_urls_identify_post_from_shortlink($short_url){
 	global $wpdb;
 	
-	$sql = $wpdb->prepare("SELECT pm.post_id FROM ".$wpdb->postmeta." AS pm INNER JOIN $wpdb->posts AS p ON p.ID = pm.post_id WHERE meta_key IN ('_ShortURL', '_CustomShortURL') AND meta_value = '%s' AND post_slug <> '%s'", $short_url, $short_url);
+	$sql = $wpdb->prepare("SELECT pm.post_id FROM ".$wpdb->postmeta." AS pm INNER JOIN $wpdb->posts AS p ON p.ID = pm.post_id WHERE meta_key IN ('_ShortURL', '_CustomShortURL') AND meta_value = '%s' AND post_name <> '%s'", $short_url, $short_url);
 	
 	$post_id = $wpdb->get_var($sql);
 	
@@ -697,8 +713,8 @@ function azrcrv_urls_admin_get_custom_shortlink($link, $id, $context){
  * @since 1.0.0
  *
  */
-function azc_urls_get_custom_shortlink(){
-		return azrcrv_urls_get_custom_shortlink($id);
+function azc_urls_get_custom_shortlink($post_id = null){
+		return azrcrv_urls_get_custom_shortlink($post_id);
 }
 
 /**
@@ -707,11 +723,13 @@ function azc_urls_get_custom_shortlink(){
  * @since 1.0.0
  *
  */
-function azrcrv_urls_get_custom_shortlink(){
+function azrcrv_urls_get_custom_shortlink($post_id = null){
 	if ($_GET['preview'] == 'true'){ return ''; }
 	
 	global $post;
-	$post_id = $post->ID;
+	if (!isset($post_id)){
+		$post_id = $post->ID;
+	}
 	
 	$short_url = azrcrv_urls_get_shortlink($post_id);
 
@@ -750,7 +768,7 @@ function azrcrv_urls_create_post_type(){
 		'menu_position' => 20,
 		'supports' => array('title', 'comments', 'trackbacks', 'revisions', 'editor'),
 		'taxonomies' => array(''),
-		'menu_icon' => plugins_url('images/urls-16x16.png', __FILE__),
+		'menu_icon' => 'dashicons-admin-links',
 		)
 	);
 }
