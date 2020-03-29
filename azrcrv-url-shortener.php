@@ -3,10 +3,10 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: URL Shortener
  * Description: Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
- * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/Url-shortener
+ * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/Url-shortener/
  * Text Domain: url-shortener
  * Domain Path: /languages
  * ------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ function azrcrv_urls_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-urls">'.esc_html__('Settings' ,'url-shortener').'</a>';
+		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-urls"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'url-shortener').'</a>';
 		array_unshift($links, $settings_link);
 	}
 
