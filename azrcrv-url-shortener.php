@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: URL Shortener
  * Description: Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/Url-shortener/
@@ -24,7 +24,7 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname(__FILE__).'/pluginmenu/menu.php');
-register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_urls');
+add_action('admin_init', 'azrcrv_create_plugin_menu_urls');
 
 // include update client
 require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
@@ -36,10 +36,10 @@ require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php')
  *
  */
 // add actions
-register_activation_hook(__FILE__, 'azrcrv_urls_set_default_options');
 register_activation_hook(__FILE__, 'azrcrv_urls_install');
 
 // add actions
+add_action('admin_init', 'azrcrv_urls_set_default_options');
 add_action('admin_menu', 'azrcrv_urls_create_admin_menu');
 add_action('admin_post_azrcrv_urls_save_options', 'azrcrv_urls_save_options');
 add_action('admin_menu', 'azrcrv_urls_add_sidebar_metabox');
@@ -106,6 +106,7 @@ function azrcrv_urls_set_default_options($networkwide){
 						'protocol' => 'https',
 						'domain' => '',
 						'priority' => 'default',
+						'updated' => strtotime('2020-04-04'),
 			);
 	
 	// set defaults for multi-site
@@ -149,20 +150,28 @@ function azrcrv_urls_update_options($option_name, $new_options, $is_network_site
 			if (get_site_option($old_option_name) === false){
 				add_site_option($option_name, $new_options);
 			}else{
-				add_site_option($option_name, azrcrv_urls_update_default_options($new_options, get_site_option($old_option_name)));
+				add_site_option($option_name, $new_options);
 			}
 		}else{
-			update_site_option($option_name, azrcrv_urls_update_default_options($new_options, get_site_option($option_name)));
+			$options = get_site_option($option_name);
+			if (!isset($options['updated']) OR $options['updated'] < $new_options['updated'] ){
+				$options['updated'] = $new_options['updated'];
+				update_site_option($option_name, azrcrv_urls_update_default_options($options, $new_options));
+			}
 		}
 	}else{
 		if (get_option($option_name) === false){
 			if (get_option($old_option_name) === false){
 				add_option($option_name, $new_options);
 			}else{
-				add_option($option_name, azrcrv_urls_update_default_options($new_options, get_option($old_option_name)));
+				add_option($option_name, $new_options);
 			}
 		}else{
-			update_option($option_name, azrcrv_urls_update_default_options($new_options, get_option($option_name)));
+			$options = get_option($option_name);
+			if (!isset($options['updated']) OR $options['updated'] < $new_options['updated'] ){
+				$options['updated'] = $new_options['updated'];
+				update_option($option_name, azrcrv_urls_update_default_options($options, $new_options));
+			}
 		}
 	}
 }
@@ -179,10 +188,10 @@ function azrcrv_urls_update_default_options( &$default_options, $current_options
     $current_options = (array) $current_options;
     $updated_options = $current_options;
     foreach ($default_options as $key => &$value) {
-        if (is_array( $value) && isset( $updated_options[$key ])){
+        if (is_array( $value) && isset( $updated_options[$key])){
             $updated_options[$key] = azrcrv_urls_update_default_options($value, $updated_options[$key]);
         } else {
-            $updated_options[$key] = $value;
+			$updated_options[$key] = $value;
         }
     }
     return $updated_options;
