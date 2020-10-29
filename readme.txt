@@ -1,12 +1,12 @@
 === URL Shortener ===
 
 Description:	Create your own fully integrated URL shortener for your posts, pages and custom post types.
-Version:		1.3.0
+Version:		1.4.0
 Tags:			url shortener, shortlink, shorturl, short_url, custom short url, shortcode
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/url-shortener/
-Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.3.0/azrcrv-url-shortener.zip
+Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.4.0/azrcrv-url-shortener.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
 Requires:		1.0.0
@@ -28,7 +28,8 @@ Example shortcode usage:
 	```echo do_shortcode('[short-url]');```
 
 Example function usage:
-	```if (function_exists('azrcrv_urls_get_custom_shortlink')){
+	```
+	if (function_exists('azrcrv_urls_get_custom_shortlink')){
 		printf(' <span class="short-link">%s</span>', '<a href="'.azrcrv_urls_get_custom_shortlink().'" title="Shortlink to '.the_title_attribute('echo=0').'" rel="bookmark">'.'Shortlink'.'</a>');
 	}
 	```
@@ -57,6 +58,12 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 == Changelog ==
 
 # Changelog
+
+### [Version 1.4.0](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.4.0)
+ * Fix plugin action link to use admin_url() function.
+ * Rewrite option handling so defaults not stored in database on plugin initialisation.
+ * Add plugin icon and banner.
+ * Update azurecurve plugin menu.
 
 ### [Version 1.3.0](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.3.0)
  * Return custom short URL instead of standard short URL when one set.
@@ -110,5 +117,5 @@ Some of the top plugins available from **azurecurve** are:
 * [Breadcrumbs](https://development.azurecurve.co.uk/classicpress-plugins/breadcrumbs/)
 * [Series Index](https://development.azurecurve.co.uk/classicpress-plugins/series-index/)
 * [To Twitter](https://development.azurecurve.co.uk/classicpress-plugins/to-twitter/)
-* [Theme Switches](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
+* [Theme Switcher](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
 * [Toggle Show/Hide](https://development.azurecurve.co.uk/classicpress-plugins/toggle-showhide/)
