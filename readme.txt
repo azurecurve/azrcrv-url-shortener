@@ -1,12 +1,12 @@
 === URL Shortener ===
 
 Description:	Create your own fully integrated URL shortener for your posts, pages and custom post types.
-Version:		1.5.1
+Version:		1.5.2
 Tags:			url shortener, shortlink, shorturl, short_url, custom short url, shortcode
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/url-shortener/
-Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.5.1/azrcrv-url-shortener.zip
+Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.5.2/azrcrv-url-shortener.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
 Requires:		1.0.0
@@ -20,19 +20,21 @@ Create your own fully integrated URL shortener for your posts, pages and custom 
 
 == Description ==
 
+# Description
+
 Create your own fully integrated URL shortener for your posts, pages and custom post types.
 
-Shortcode **[short-url]** or **function azrcrv_urls_get_custom_shortlink** can be called from themes or other plugins to retrieve the custom short URL.
+Shortcode `[short-url]` or `*function azrcrv_urls_get_custom_shortlink` can be called from themes or other plugins to retrieve the custom short URL.
 
 Example shortcode usage:
-	```echo do_shortcode('[short-url]');```
+```echo do_shortcode('[short-url]');```
 
 Example function usage:
-	```
-	if (function_exists('azrcrv_urls_get_custom_shortlink')){
-		printf(' <span class="short-link">%s</span>', '<a href="'.azrcrv_urls_get_custom_shortlink().'" title="Shortlink to '.the_title_attribute('echo=0').'" rel="bookmark">'.'Shortlink'.'</a>');
-	}
-	```
+```
+if (function_exists('azrcrv_urls_get_custom_shortlink')){
+	printf(' <span class="short-link">%s</span>', '<a href="'.azrcrv_urls_get_custom_shortlink().'" title="Shortlink to '.the_title_attribute('echo=0').'" rel="bookmark">'.'Shortlink'.'</a>');
+}
+```
 
 Settings page allows options for short URL generation to be configured.
 
@@ -40,7 +42,9 @@ This plugin is multisite compatible; each site will need settings to be configur
 
 == Installation ==
 
-* Download the plugin from [GitHub](https://github.com/azurecurve/azrcrv-url-shortener/releases/latest/).
+# Installation Instructions
+
+* Download the latest release of the plugin from [GitHub](https://github.com/azurecurve/azrcrv-url-shortener/releases/latest/).
 * Upload the entire zip file using the Plugins upload function in your ClassicPress admin panel.
 * Activate the plugin.
 * Configure relevant settings via the configuration page in the admin control panel (azurecurve menu).
@@ -50,7 +54,7 @@ This plugin is multisite compatible; each site will need settings to be configur
 # Frequently Asked Questions
 
 ### Can I translate this plugin?
-Yes, the .pot fie is in the plugins languages folder and can also be downloaded from the plugin page on https://development.azurecurve.co.uk; if you do translate this plugin, please sent the .po and .mo files to translations@azurecurve.co.uk for inclusion in the next version (full credit will be given).
+Yes, the .pot file is in the plugins languages folder; if you do translate this plugin, please sent the .po and .mo files to translations@azurecurve.co.uk for inclusion in the next version (full credit will be given).
 
 ### Is this plugin compatible with both WordPress and ClassicPress?
 This plugin is developed for ClassicPress, but will likely work on WordPress.
@@ -58,6 +62,10 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 == Changelog ==
 
 # Changelog
+
+### [Version 1.5.2](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.5.2)
+ * Update azurecurve menu.
+ * Update readme files.
 
 ### [Version 1.5.1](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.5.1)
  * Update azurecurve menu and logo.
@@ -119,12 +127,16 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # About azurecurve
 
-**azurecurve** was one of the first plugin developers to start developing for Classicpress; all plugins are available from [azurecurve Development](https://development.azurecurve.co.uk/) and are integrated with the [Update Manager plugin](https://codepotent.com/classicpress/plugins/update-manager/) by [CodePotent](https://codepotent.com/) for fully integrated, no hassle, updates.
+**azurecurve** was one of the first plugin developers to start developing for Classicpress; all plugins are available from [azurecurve Development](https://development.azurecurve.co.uk/) and are integrated with the [Update Manager plugin](https://directory.classicpress.net/plugins/update-manager) for fully integrated, no hassle, updates.
 
-Some of the top plugins available from **azurecurve** are:
-* [Add Twitter Cards](https://development.azurecurve.co.uk/classicpress-plugins/add-twitter-cards/)
-* [Breadcrumbs](https://development.azurecurve.co.uk/classicpress-plugins/breadcrumbs/)
-* [Series Index](https://development.azurecurve.co.uk/classicpress-plugins/series-index/)
-* [To Twitter](https://development.azurecurve.co.uk/classicpress-plugins/to-twitter/)
-* [Theme Switcher](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
-* [Toggle Show/Hide](https://development.azurecurve.co.uk/classicpress-plugins/toggle-showhide/)
+Some of the other plugins available from **azurecurve** are:
+ * BBCode - [details](https://development.azurecurve.co.uk/classicpress-plugins/bbcode/) / [download](https://github.com/azurecurve/azrcrv-bbcode/releases/latest/)
+ * Breadcrumbs - [details](https://development.azurecurve.co.uk/classicpress-plugins/breadcrumbs/) / [download](https://github.com/azurecurve/azrcrv-breadcrumbs/releases/latest/)
+ * Code - [details](https://development.azurecurve.co.uk/classicpress-plugins/code/) / [download](https://github.com/azurecurve/azrcrv-code/releases/latest/)
+ * Filtered Categories - [details](https://development.azurecurve.co.uk/classicpress-plugins/filtered-categories/) / [download](https://github.com/azurecurve/azrcrv-filtered-categories/releases/latest/)
+ * Flags - [details](https://development.azurecurve.co.uk/classicpress-plugins/flags/) / [download](https://github.com/azurecurve/azrcrv-flags/releases/latest/)
+ * Get GitHub File - [details](https://development.azurecurve.co.uk/classicpress-plugins/get-github-file/) / [download](https://github.com/azurecurve/azrcrv-get-github-file/releases/latest/)
+ * Maintenance Mode - [details](https://development.azurecurve.co.uk/classicpress-plugins/maintenance-mode/) / [download](https://github.com/azurecurve/azrcrv-maintenance-mode/releases/latest/)
+ * Markdown - [details](https://development.azurecurve.co.uk/classicpress-plugins/markdown/) / [download](https://github.com/azurecurve/azrcrv-markdown/releases/latest/)
+ * Series Index - [details](https://development.azurecurve.co.uk/classicpress-plugins/series-index/) / [download](https://github.com/azurecurve/azrcrv-series-index/releases/latest/)
+ * Shortcodes in Comments - [details](https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-comments/) / [download](https://github.com/azurecurve/azrcrv-shortcodes-in-comments/releases/latest/)
