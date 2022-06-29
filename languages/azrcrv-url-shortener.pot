@@ -2,167 +2,167 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: URL Shortener\n"
-"POT-Creation-Date: 2020-01-05 13:11+0000\n"
+"POT-Creation-Date: 2021-12-27 18:25+0000\n"
 "PO-Revision-Date: 2019-02-24 16:03+0000\n"
 "Last-Translator: \n"
-"Language-Team: https://translate.azurecurve.co.uk/\n"
+"Language-Team: translate@azurecurve.co.uk\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: azrcrv-url-shortener.php\n"
 
-#: azrcrv-url-shortener.php:160
+#: azrcrv-url-shortener.php:156
 msgid "Settings"
 msgstr ""
 
-#: azrcrv-url-shortener.php:176
+#: azrcrv-url-shortener.php:172
 msgid "URL Shortener Settings"
 msgstr ""
 
-#: azrcrv-url-shortener.php:177
+#: azrcrv-url-shortener.php:173
 msgid "URL Shortener"
 msgstr ""
 
-#: azrcrv-url-shortener.php:191
+#: azrcrv-url-shortener.php:187
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: azrcrv-url-shortener.php:209
+#: azrcrv-url-shortener.php:210
 msgid ""
 "Settings have been saved except the domain which must be different to the "
 "site URL."
 msgstr ""
 
-#: azrcrv-url-shortener.php:215
+#: azrcrv-url-shortener.php:216
 msgid "Site settings have been saved."
 msgstr ""
 
-#: azrcrv-url-shortener.php:230
+#: azrcrv-url-shortener.php:231
 msgid "Use Lowercase Characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:231 azrcrv-url-shortener.php:232
+#: azrcrv-url-shortener.php:232 azrcrv-url-shortener.php:233
 msgid "Use lowercase characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:236
+#: azrcrv-url-shortener.php:237
 msgid "Use Uppercase Characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:237 azrcrv-url-shortener.php:238
+#: azrcrv-url-shortener.php:238 azrcrv-url-shortener.php:239
 msgid "Use uppercase characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:242
+#: azrcrv-url-shortener.php:243
 msgid "Use Numeric Characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:243 azrcrv-url-shortener.php:244
+#: azrcrv-url-shortener.php:244 azrcrv-url-shortener.php:245
 msgid "Use numeric characters"
 msgstr ""
 
-#: azrcrv-url-shortener.php:248
+#: azrcrv-url-shortener.php:249
 msgid "Length"
 msgstr ""
 
-#: azrcrv-url-shortener.php:250
+#: azrcrv-url-shortener.php:251
 msgid "Length of the shortened url"
 msgstr ""
 
-#: azrcrv-url-shortener.php:253
+#: azrcrv-url-shortener.php:254
 msgid "Protocol"
 msgstr ""
 
-#: azrcrv-url-shortener.php:255
+#: azrcrv-url-shortener.php:256
 msgid "Protocol used for redirects (http or https)"
 msgstr ""
 
-#: azrcrv-url-shortener.php:258
+#: azrcrv-url-shortener.php:259
 msgid "Domain"
 msgstr ""
 
-#: azrcrv-url-shortener.php:260
+#: azrcrv-url-shortener.php:261
 msgid "Domain used for redirects (such as azrcrv.co.uk)"
 msgstr ""
 
-#: azrcrv-url-shortener.php:263
+#: azrcrv-url-shortener.php:264
 msgid "Sidebar Priority"
 msgstr ""
 
-#: azrcrv-url-shortener.php:273
+#: azrcrv-url-shortener.php:274
 msgid "Example usage"
 msgstr ""
 
-#: azrcrv-url-shortener.php:275
+#: azrcrv-url-shortener.php:276
 msgid "Example shortcode usage"
 msgstr ""
 
-#: azrcrv-url-shortener.php:278
+#: azrcrv-url-shortener.php:279
 msgid "Example function usage"
 msgstr ""
 
-#: azrcrv-url-shortener.php:288
+#: azrcrv-url-shortener.php:289
 msgid "Submit"
 msgstr ""
 
-#: azrcrv-url-shortener.php:304
+#: azrcrv-url-shortener.php:305
 msgid "You do not have permissions to perform this action"
 msgstr ""
 
-#: azrcrv-url-shortener.php:378 azrcrv-url-shortener.php:735
-#: azrcrv-url-shortener.php:736
+#: azrcrv-url-shortener.php:379 azrcrv-url-shortener.php:744
+#: azrcrv-url-shortener.php:745
 msgid "Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:399
+#: azrcrv-url-shortener.php:400
 msgid "This post's short url is"
 msgstr ""
 
-#: azrcrv-url-shortener.php:737
+#: azrcrv-url-shortener.php:746
 msgid "Add New"
 msgstr ""
 
-#: azrcrv-url-shortener.php:738
+#: azrcrv-url-shortener.php:747
 msgid "Add New Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:739
+#: azrcrv-url-shortener.php:748
 msgid "Edit"
 msgstr ""
 
-#: azrcrv-url-shortener.php:740
+#: azrcrv-url-shortener.php:749
 msgid "Edit Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:741
+#: azrcrv-url-shortener.php:750
 msgid "New Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:742
+#: azrcrv-url-shortener.php:751
 msgid "View"
 msgstr ""
 
-#: azrcrv-url-shortener.php:743
+#: azrcrv-url-shortener.php:752
 msgid "View Short URL"
 msgstr ""
 
-#: azrcrv-url-shortener.php:744
+#: azrcrv-url-shortener.php:753
 msgid "Search Short URLs"
 msgstr ""
 
-#: azrcrv-url-shortener.php:745
+#: azrcrv-url-shortener.php:754
 msgid "No Short URLs found"
 msgstr ""
 
-#: azrcrv-url-shortener.php:746
+#: azrcrv-url-shortener.php:755
 msgid "No Short URLs found in Trash"
 msgstr ""
 
-#: azrcrv-url-shortener.php:747
+#: azrcrv-url-shortener.php:756
 msgid "Parent Short URL"
 msgstr ""
