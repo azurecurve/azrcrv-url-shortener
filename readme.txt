@@ -24,7 +24,7 @@ Create your own fully integrated URL shortener for your posts, pages and custom 
 
 Create your own fully integrated URL shortener for your posts, pages and custom post types.
 
-Shortcode `[short-url]` or `*function azrcrv_urls_get_custom_shortlink` can be called from themes or other plugins to retrieve the custom short URL.
+Shortcode `[short-url]` or `function azrcrv_urls_get_custom_shortlink` can be called from themes or other plugins to retrieve the custom short URL.
 
 Example shortcode usage:
 ```echo do_shortcode('[short-url]');```
