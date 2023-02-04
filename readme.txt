@@ -1,19 +1,20 @@
 === URL Shortener ===
 
 Description:	Create your own fully integrated URL shortener for your posts, pages and custom post types.
-Version:		1.5.3
+Version:		1.5.4
 Tags:			url shortener, shortlink, shorturl, short_url, custom short url, shortcode
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/url-shortener/
-Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.5.3/azrcrv-url-shortener.zip
+Download link:	https://github.com/azurecurve/azrcrv-url-shortener/releases/download/v1.5.4/azrcrv-url-shortener.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
+Requires CP:	1.0
 Requires:		1.0.0
 Tested:			4.9.99
 Text Domain:	url-shortener
 Domain Path:	/languages
-License: 		GPLv2 or later
+License: 		GPLv2 or later4
 License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 
 Create your own fully integrated URL shortener for your posts, pages and custom post types.
@@ -63,6 +64,9 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.5.4](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.5.4)
+ * Update readme file for compatibility with ClassicPress Directory.
+ 
 ### [Version 1.5.3](https://github.com/azurecurve/azrcrv-url-shortener/releases/tag/v1.5.3)
  * Update readme files.
  * Update language template.
