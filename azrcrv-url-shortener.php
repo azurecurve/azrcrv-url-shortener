@@ -1,14 +1,19 @@
 <?php
 /**
  * ------------------------------------------------------------------------------
- * Plugin Name: URL Shortener
- * Description: Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
- * Version: 1.5.4
- * Author: azurecurve
- * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
- * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/url-shortener/
- * Text Domain: url-shortener
- * Domain Path: /languages
+ * Plugin Name:		URL Shortener
+ * Description:		Automatically shortens URls for new posts, of all standard and custom types, and all past posts when loaded for the first time after activation; custom post type allows external links to be shortened.
+ * Version:			1.5.5
+ * Requires CP:		1.0
+ * Requires PHP:	7.4
+ * Author:			azurecurve
+ * Author URI:		https://development.azurecurve.co.uk/classicpress-plugins/
+ * Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/url-shortener/
+ * Donate link:		https://development.azurecurve.co.uk/support-development/
+ * Text Domain:		url-shortener
+ * Domain Path:		/languages
+ * License:			GPLv2 or later
+ * License URI:		http://www.gnu.org/licenses/gpl-2.0.html
  * ------------------------------------------------------------------------------
  * This is free software released under the terms of the General Public License,
  * version 2, or later. It is distributed WITHOUT ANY WARRANTY; without even the
